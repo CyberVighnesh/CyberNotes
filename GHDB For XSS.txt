@@ -1,0 +1,130 @@
+Google Hacking Database (GHDB) for XSS
+What is XSS?
+
+Cross-Site Scripting (XSS) is a web application vulnerability where an application improperly handles user input, allowing malicious JavaScript to execute in a user's browser.
+
+Goal of an ethical tester: Find pages that accept user input and verify whether the application safely handles it.
+
+Why Use Google Dorks for XSS?
+
+Google Dorks help security testers discover pages that commonly accept user input, such as:
+
+Search pages
+Login pages
+Feedback forms
+Contact forms
+Product search
+Comment sections
+URL parameters
+Error pages
+
+These pages may be good candidates for authorized security testing.
+
+Safe Google Dorks for Finding Input Pages
+Search Pages
+inurl:search
+Login Pages
+intitle:"Login"
+Contact Forms
+inurl:contact
+Feedback Pages
+inurl:feedback
+Search Parameters
+inurl:?q=
+Query Parameters
+inurl:?id=
+Category Pages
+inurl:?category=
+Product Pages
+inurl:?product=
+Search Within One Website
+site:example.com inurl:search
+Find PHP Pages
+site:example.com ext:php
+How XSS Testing Works
+Google Dork
+      ↓
+Find Input Page
+      ↓
+Locate User Input
+      ↓
+Test with Safe Payload
+      ↓
+Observe Output
+      ↓
+Report Responsibly
+XSS Types
+1. Reflected XSS
+Payload comes from the request.
+Not stored on the server.
+Reflected immediately.
+
+Example:
+
+https://example.com/search?q=test
+2. Stored XSS
+Payload is stored in the database.
+Every visitor receives it.
+
+Examples:
+
+Comments
+Reviews
+Forums
+3. DOM XSS
+Happens entirely in the browser.
+JavaScript modifies the page using untrusted input.
+XSS Testing Checklist
+
+✔ Search bar
+
+✔ Contact form
+
+✔ Feedback form
+
+✔ Login page
+
+✔ Profile page
+
+✔ URL parameters
+
+✔ Comment section
+
+✔ Search filters
+
+Safe Lab Environments
+
+Practice only on intentionally vulnerable applications such as:
+
+OWASP Juice Shop
+DVWA (Damn Vulnerable Web Application)
+bWAPP
+PortSwigger Web Security Academy Labs
+XVWA
+Tools
+Burp Suite Community Edition
+Browser Developer Tools
+OWASP ZAP
+Interview Questions
+What is XSS?
+
+A vulnerability where untrusted input is interpreted as executable JavaScript in a user's browser.
+
+Why use Google Dorks?
+
+To identify publicly indexed pages with input fields that can be assessed during an authorized security test.
+
+Can Google Dorks detect XSS automatically?
+
+No. They only help locate pages that may be worth testing. They do not confirm vulnerabilities.
+
+What is the difference between Reflected and Stored XSS?
+Reflected XSS	Stored XSS
+Payload comes from the request	Payload is saved on the server
+Executed immediately	Executed whenever users view the stored content
+Usually affects one request	Can affect many users
+Key Takeaways
+Google Dorks help locate input pages, not vulnerabilities.
+XSS occurs when applications fail to safely handle user input.
+Always perform testing only on systems you own or have explicit permission to assess.
+Use dedicated lab environments to learn and practice XSS safely.
