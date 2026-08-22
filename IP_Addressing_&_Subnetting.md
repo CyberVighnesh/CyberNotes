@@ -1,4 +1,4 @@
-# 🌐 IP Addressing & Subnetting – Beginner Notes
+# 🌐 IP Addressing & Subnetting – Notes
 
 Networking is like sending letters between houses.  
 Each computer needs an **address** (IP) and rules (subnetting) to know where to send data.
