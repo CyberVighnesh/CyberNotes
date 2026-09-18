@@ -1,4 +1,4 @@
-# SQL — Trainer + Student Notes
+# SQL — Student Notes
 
 ## 1. What is SQL?
 
